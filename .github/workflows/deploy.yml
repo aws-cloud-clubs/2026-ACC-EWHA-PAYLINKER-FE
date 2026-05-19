@@ -23,9 +23,9 @@ jobs:
           API_TOKEN_GITHUB: ${{ secrets.AUTO_ACTIONS }}
         with:
           source-directory: 'output'
-          destination-github-username: HongYeonLee #개인 레포 소유자의 username
-          destination-repository-name: 2026-ACC-EWHA-PAYLINKER-FE # 포크 뜬 개인 레포 이름
-          user-email: ${{ secrets.OFFICIAL_ACCOUNT_EMAIL }} # 개인 계정 이메일
+          destination-github-username: HongYeonLee
+          destination-repository-name: 2026-ACC-EWHA-PAYLINKER-FE
+          user-email: ${{ secrets.EMAIL }}
           commit-message: ${{ github.event.commits[0].message }}
           target-branch: main
       - name: Test get variable exported by push-to-another-repository
